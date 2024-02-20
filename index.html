@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sample-site-8</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+<span id="mobile_menu" class="fixed w-10/12 border-2 border-yellow-600 rounded-xl top-20 bg-black z-10 text-white p-4 animate__animated animate__fadeInLeft hidden">
+<ul class="flex flex-col space-y-12 text-xl">
+<a href="#" class=" hover:no-underline"><li class="cursor-pointer text-yellow-500 duration-200">Home</li></a>
+<a href="#About" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">About</li></a>
+<a href="#Menu" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Menu</li></a>
+<a href="#Special" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Special</li></a>
+<a href="#Events" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Events</li></a>
+<a href="#Chefs" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Chefs</li></a>
+<a href="#Contact" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Contact</li></a>
+<button class="px-6 max-xl:mx-4 py-2 border-2 font-semibold border-yellow-500 rounded-full hover:bg-yellow-500 duration-200">BOOK A TABLE</button>
+</ul></span>
+<header>
+<nav class="w-screen fixed py-3 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 BgTransparentBlack flex justify-between items-center text-white backdrop-blur-sm z-20">
+<a href="#" class="text-4xl cursor-pointer hover:no-underline hover:text-white">Resturent</a>
+<ul class="flex space-x-10 max-2xl:space-x-8 max-xl:space-x-6 max-lg:hidden">
+<a href="#" class=" hover:no-underline"><li class="cursor-pointer text-yellow-500 duration-200">Home</li></a>
+<a href="#About" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">About</li></a>
+<a href="#Menu" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Menu</li></a>
+<a href="#Special" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Special</li></a>
+<a href="#Events" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Events</li></a>
+<a href="#Chefs" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Chefs</li></a>
+<div class="dropdown show">
+<a class="dropdown-toggle hover:no-underline hover:text-yellow-500 duration-200" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a> 
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<a class="dropdown-item hover:text-yellow-500 duration-200" href="#">DropDown-1</a>
+<a class="dropdown-item hover:text-yellow-500 duration-200" href="#">DropDown-2</a>
+<a class="dropdown-item hover:text-yellow-500 duration-200" href="#">DropDown-3</a>
+<a class="dropdown-item hover:text-yellow-500 duration-200" href="#">DropDown-4</a>
+</div></div>
+<a href="#Contact" class=" hover:no-underline"><li class="cursor-pointer hover:text-yellow-500 duration-200">Contact</li></a>
+</ul>
+<button class="px-6 max-xl:mx-4 py-2 border-2 font-semibold border-yellow-500 rounded-full hover:bg-yellow-500 duration-200 max-lg:hidden">BOOK A TABLE</button>
+<span class="hidden max-lg:flex"><i class="fa-solid fa-bars fa-2x hover:text-yellow-500 cursor-pointer duration-200" id="ham_burger"></i></span>
+</nav>
+</header>
+<main class="">
+<section id="Home" class="w-screen h-screen bg-blend-darken flex items-center justify-between px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 max-lg:flex-col max-lg:justify-center max-lg:space-y-24 max-lg:text-center py-4 text-white">
+<div class="flex flex-col space-y-4">
+<h1 class="text-6xl max-lg:text-5xl max-md:text-4xl font-bold">Welcome to <span class="text-yellow-500">Reaturent</span></h1>
+<p class="PlayFairDisplay text-2xl max-lg:text-xl max-md:text-base font-medium text-neutral-200 ml-1">Delivering great food for more than 18 years!</p>
+<div class="space-x-4 mt-6">
+<button class="font-medium border-2 border-yellow-500 hover:bg-yellow-500 rounded-full px-3 py-2 duration-200">OUR MENU</button>
+<button class="font-medium border-2 border-yellow-500 hover:bg-yellow-500 rounded-full px-3 py-2 duration-200">BOOK A TABLE</button>
+</div></div>
+<a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" target="_blank" class="hover:no-underline hover:text-white"><div class="w-44 h-44 flex justify-center items-center rounded-full bg-yellow-400 bg-opacity-35 cursor-pointer PlayBurronAnimation"><div class="w-28 h-28 rounded-full bg-yellow-600 bg-opacity-50 flex justify-center items-center"><i class="fa-solid fa-play fa-4x "></i></div></div></a>
+</section>
+<section id="About" class="w-screen py-24 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 max-lg:justify-center max-lg:items-center bg-blend-darken flex justify-between items-center space-x-4 max-lg:space-x-0 text-white max-lg:flex-col-reverse">
+<div class="flex flex-col w-1/2 max-lg:w-full space-y-6 max-lg:mt-10">
+<div class="space-y-4">
+<p class="text-3xl max-sm:text-2xl font-semibold PlayFairDisplay">Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</p>
+<p class="text-neutral-300 italic tracking-wide max-lg:tracking-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div><div class="space-y-4 py-2">
+<div class="flex items-center space-x-3 tracking-wide font-light"><i class="fa-regular fa-circle-check text-yellow-600 fa-lg"></i><p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div> 
+<div class="flex items-center space-x-3 tracking-wide font-light"><i class="fa-regular fa-circle-check text-yellow-600 fa-lg"></i><p>Duis aute irure dolor in reprehenderit in voluptate velit.</p></div> 
+<div class="flex space-x-3 tracking-wide font-light"><i class="fa-regular fa-circle-check text-yellow-600 fa-lg mt-2.5"></i><p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</p></div> 
+</div>
+<p class="tracking-wide font-light">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+</div>
+<div class="w-1/2 mx-2 max-lg:w-full border-4 border-neutral-600 hover:before:top-2 hover:before:left-2 hover:after:bottom-2 hover:after:right-2 hover:scale-105 duration-300 before:duration-300 after:duration-300 relative before:absolute before:top-5 before:left-5 before:w-1/6 before:h-1/6 before:border-t-4 before:border-l-4 before:border-yellow-600 after:absolute after:right-5 after:bottom-5 after:w-1/6 after:h-1/6 after:border-b-4 after:border-r-4 after:border-yellow-600"><img src="./recources/about.jpg" alt=".about_img"></div>
+</section>
+<section class="w-screen py-12 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 bg-stone-950 space-y-8">
+<div class="space-y-2"><h5 class="text-neutral-400 relative before:absolute before:left-16 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">WHY US</h5><h2 class="text-5xl max-lg:text-4xl font-semibold text-yellow-600 PlayFairDisplay">Why Choose Our Restaurant</h2></div>
+<div class="flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-4 justify-between items-center space-x-4">
+            <div class="flex flex-col px-8 py-16 bg-stone-900 space-y-6 w-1/3 max-lg:w-2/3 max-md:w-full hover:bg-yellow-600 group duration-100">
+                <h3 class="text-3xl text-yellow-600 font-semibold tracking-wide hover group-hover:text-white group-hover:-translate-y-3 group-hover:duration-100 duration-100">01</h3>
+                <h5 class="text-white text-2xl font-medium PlayFairDisplay group-hover:-translate-y-3 group-hover:duration-100 duration-100">Lorem Ipsum</h5>
+                <p class="text-neutral-400 group-hover:text-white group-hover:-translate-y-3 group-hover:duration-100 duration-100">Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+            </div>
+            <div class="flex flex-col px-8 py-16 bg-stone-900 space-y-6 w-1/3 max-lg:w-2/3 max-md:w-full hover:bg-yellow-600 group duration-100">
+                <h3 class="text-3xl text-yellow-600 font-semibold tracking-wide hover group-hover:text-white group-hover:-translate-y-3 group-hover:duration-100 duration-100">02</h3>
+                <h5 class="text-white text-2xl font-medium PlayFairDisplay group-hover:-translate-y-3 group-hover:duration-100 duration-100">Repellat Nihil</h5>
+                <p class="text-neutral-400 group-hover:text-white group-hover:-translate-y-3 group-hover:duration-100 duration-100">Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+            </div>
+            <div class="flex flex-col px-8 py-16 bg-stone-900 space-y-6 w-1/3 max-lg:w-2/3 max-md:w-full hover:bg-yellow-600 group duration-100">
+                <h3 class="text-3xl text-yellow-600 font-semibold tracking-wide hover group-hover:text-white group-hover:-translate-y-3 group-hover:duration-100 duration-100">03</h3>
+                <h5 class="text-white text-2xl font-medium PlayFairDisplay group-hover:-translate-y-3 group-hover:duration-100 duration-100">Ad ad velit qui</h5>
+                <p class="text-neutral-400 group-hover:text-white group-hover:-translate-y-3 group-hover:duration-100 duration-100">Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+            </div>
+        </div>
+     </section>
+     <section id="Menu" class="w-screen py-12 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 bg-stone-800 flex flex-col space-y-8">
+        <div class="space-y-2">
+            <h5 class="text-neutral-400 relative before:absolute before:left-16 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">MENU</h5>
+            <h2 class="text-5xl max-lg:text-4xl font-semibold text-yellow-600 PlayFairDisplay">Check Our Tasty Menu</h2>
+        </div>
+        <div class="flex space-x-12 max-sm:space-x-6 justify-center items-center PlayFairDisplay text-white">
+            <div class="text-xl tracking-wide text-yellow-600 cursor-pointer duration-300" id="Menu_btn_1">All</div>
+            <div class="text-xl tracking-wide hover:text-yellow-600 cursor-pointer duration-300" id="Menu_btn_2">Starter</div>
+            <div class="text-xl tracking-wide hover:text-yellow-600 cursor-pointer duration-300" id="Menu_btn_3">Salads</div>
+            <div class="text-xl tracking-wide hover:text-yellow-600 cursor-pointer duration-300" id="Menu_btn_4">Specialty</div>
+        </div>
+        <div class="flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-12 max-lg:items-center max-lg:justify-center space-x-12">
+            <div class="flex flex-col space-y-12">
+                <div class="flex space-x-4 salads animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/lobster-bisque.jpg" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Lobster Bisque</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$5.95</p></div><p class="text-neutral-400 italic">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 starter animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/lobster-roll.jpg" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Crab Cake</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$7.95</p></div><p class="text-neutral-400 italic">A delicate crab cake served on a toasted roll with lettuce and tartar sauce</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 salads animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/mozzarella.jpg" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Tuscan Grilled</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$9.95</p></div><p class="text-neutral-400 italic">Grilled chicken with provolone, artichoke hearts, and roasted red pesto</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 starter animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/specials-1.png" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Greek Salad</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$9.95</p></div><p class="text-neutral-400 italic">Fresh spinach, crisp romaine, tomatoes, and Greek olives</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 speciall animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/specials-2.png" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">GLobster Roll</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$12.95</p></div><p class="text-neutral-400 italic">Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-12">
+                <div class="flex space-x-4 speciall animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/lobster-bisque.jpg" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Bread Barrel</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$6.95</p></div><p class="text-neutral-400 italic">Lorem, deren, trataro, filede, nerada</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 starter animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/lobster-roll.jpg" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Caesar Selections</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$8.95</p></div><p class="text-neutral-400 italic">A delicate crab cake served on a toasted roll with lettuce and tartar sauce</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 salads animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/mozzarella.jpg" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Mozzarella Stics</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$4.95</p></div><p class="text-neutral-400 italic">Grilled chicken with provolone, artichoke hearts, and roasted red pesto</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4 speciall animate__animated animate__slideInUp">
+                    <div class="w-16 h-16 rounded-full border-4 border-neutral-400 overflow-hidden"><img src="./recources/specials-1.png" alt="" class="w-full h-full"></div>
+                    <div class="flec flex-col">
+                    <div class="flex text-white space-x-2"><p class="text-xl font-semibold cursor-pointer hover:text-yellow-600">Spinach Salad</p><div class="tracking-widest text-neutral-300"><span>........................................</span><span class="max-2xl:hidden">......................................</span></div><p class="text-yellow-600 font-semibold">$9.95</p></div><p class="text-neutral-400 italic">Fresh spinach, crisp romaine, tomatoes, and Greek olives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section id="Special" class="w-screen py-12 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 flex flex-col bg-stone-900 space-y-8">
+        <div class="space-y-2">
+            <h5 class="text-neutral-400 relative before:absolute before:left-16 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">SPECIALS</h5>
+            <h2 class="text-5xl max-lg:text-4xl font-semibold text-yellow-600 PlayFairDisplay">Check Our Specials</h2>
+        </div>
+        <div class="flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-6 space-x-6 text-white">
+            <div class="w-1/3 max-lg:w-full flex flex-col space-y-4 border-r-2 border-yellow-600">
+                <div class="p-3 bg-yellow-600 text-stone-900 cursor-pointer hover:duration-200" id="S_btn_1">
+                    <p>Modi sit est</p>
+                </div>                                      
+                <div class="p-3 hover:duration-200 cursor-pointer hover:text-yellow-600" id="S_btn_2">
+                    <p>Unde praesentium sed</p>
+                </div>                                      
+                <div class="p-3 hover:duration-200 cursor-pointer hover:text-yellow-600" id="S_btn_3">
+                    <p>pariatur explicabo vel</p>
+                </div>                                      
+                <div class="p-3 hover:duration-200 cursor-pointer hover:text-yellow-600" id="S_btn_4">
+                    <p>Nosturm qui quasi</p>
+                </div>                                      
+                <div class="p-3 hover:duration-200 cursor-pointer hover:text-yellow-600" id="S_btn_5">
+                    <p>Iusto ut expedita aut</p>
+                </div>                                      
+                                                                        
+            </div>
+            <div class="flex w-2/3 max-lg:w-full flex-col space-y-4 animate__animated animate__fadeIn" id="S_box_1">
+            <h4 class="text-white text-2xl PlayFairDisplay font-semibold"> Architecto ut aperiam autem id</h4>
+            <div class="flex space-x-4">
+            <div class="flex flex-col space-y-4">
+            <p class="text-neutral-400 italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+            <p class="text-neutral-400 tracking-wide">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p></div>
+            <div class="w-full"><img src="./recources/specials-1.png" alt="dish_1"></div></div>
+            </div>
+            <div class="hidden w-2/3 max-lg:w-full flex-col space-y-4 animate__animated animate__fadeIn" id="S_box_2">
+            <h4 class="text-white text-2xl PlayFairDisplay font-semibold">Et blanditiis nemo veritatis excepturi</h4>
+            <div class="flex space-x-4">
+            <div class="flex flex-col space-y-4">
+            <p class="text-neutral-400 italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+            <p class="text-neutral-400 tracking-wide">Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p></div>
+            <div class="w-full"><img src="./recources/specials-2.png" alt="dish_1"></div></div>
+            </div>
+            <div class="hidden w-2/3 max-lg:w-full flex-col space-y-4 animate__animated animate__fadeIn" id="S_box_3">
+            <h4 class="text-white text-2xl PlayFairDisplay font-semibold">Impedit facilis occaecati odio neque aperiam sit</h4>
+            <div class="flex space-x-4">
+            <div class="flex flex-col space-y-4">
+            <p class="text-neutral-400 italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+            <p class="text-neutral-400 tracking-wide">Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p></div>
+            <div class="w-full"><img src="./recources/specials-3.png" alt="dish_1"></div></div>
+            </div>
+            <div class="hidden w-2/3 max-lg:w-full flex-col space-y-4 animate__animated animate__fadeIn" id="S_box_4">
+            <h4 class="text-white text-2xl PlayFairDisplay font-semibold">Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h4>
+            <div class="flex space-x-4">
+            <div class="flex flex-col space-y-4">
+            <p class="text-neutral-400 italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+            <p class="text-neutral-400 tracking-wide">Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p></div>
+            <div class="w-full"><img src="./recources/specials-4.png" alt="dish_1"></div></div>
+            </div>
+            <div class="hidden w-2/3 max-lg:w-full flex-col space-y-4 animate__animated animate__fadeIn" id="S_box_5">
+            <h4 class="text-white text-2xl PlayFairDisplay font-semibold">Est eveniet ipsam sindera pad rone matrelat sando reda</h4>
+            <div class="flex space-x-4">
+            <div class="flex flex-col space-y-4">
+            <p class="text-neutral-400 italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+            <p class="text-neutral-400 tracking-wide">Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p></div>
+            <div class="w-full"><img src="./recources/specials-5.png" alt="dish_1"></div></div>
+            </div>
+
+        </div>
+     </section>
+     <section id="Events" class="w-screen py-12 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 flex flex-col space-y-8 bg-blend-darken">
+        <div class="space-y-2">
+            <h5 class="text-neutral-400 relative before:absolute before:left-16 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">EVENTS</h5>
+            <h2 class="text-5xl max-lg:text-4xl font-semibold text-yellow-600 PlayFairDisplay">Organize Your Events in our Restaurant</h2>
+        </div>
+        <div class="max-lg:flex max-lg: justify-center max-lg:items-center">
+            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                <div class="carousel-inner ">
+                  <div class="carousel-item active">
+                    <div class="flex max-xl:flex-col space-x-12 max-xl:space-x-0 max-xl:space-y-4 p-8">
+                        <img class="w-2/5 max-xl:w-1/2 max-md:w-2/3 max-sm:w-10/12" src="./recources/event-birthday.jpg" alt="First slide">
+                        <div class="flex flex-col space-y-4 w-3/5 max-xl:w-full">
+                            <h4 class="text-2xl font-semibold text-yellow-600 PlayFairDisplay">Birthday Parties</h4>
+                            <h5 class="text-2xl text-white font-semibold border-b border-yellow-600 w-20">$189</h5>
+                            <p class="italic text-white w-2/3">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                            <div class="flex flex-col space-y-4 py-2 text-white">
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <p class="text-white tracking-wide w-2/3">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="flex max-xl:flex-col space-x-12 max-xl:space-x-0 max-xl:space-y-4 p-8">
+                        <img class="w-2/5 max-xl:w-1/2 max-md:w-2/3 max-sm:w-10/12" src="./recources/event-private.jpg" alt="First slide">
+                        <div class="flex flex-col space-y-4 w-3/5 max-xl:w-full">
+                            <h4 class="text-2xl font-semibold text-yellow-600 PlayFairDisplay">Birthday Parties</h4>
+                            <h5 class="text-2xl text-white font-semibold border-b border-yellow-600 w-20">$290</h5>
+                            <p class="italic text-white w-2/3">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                            <div class="flex flex-col space-y-4 py-2 text-white">
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <p class="text-white tracking-wide w-2/3">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="flex max-xl:flex-col space-x-12 max-xl:space-x-0 max-xl:space-y-4 p-8">
+                        <img class="w-2/5 max-xl:w-1/2 max-md:w-2/3 max-sm:w-10/12" src="./recources/event-private.jpg" alt="First slide">
+                        <div class="flex flex-col space-y-4 w-3/5 max-xl:w-full">
+                            <h4 class="text-2xl w-full font-semibold text-yellow-600 PlayFairDisplay">Birthday Parties</h4>
+                            <h5 class="text-2xl text-white font-semibold border-b border-yellow-600 w-20">$99</h5>
+                            <p class="italic text-white w-2/3">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                            <div class="flex flex-col space-y-4 py-2 text-white">
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <p class="text-white tracking-wide w-2/3">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev -translate-x-36 max-xl:-translate-x-24 max-sm:-translate-x-8" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next translate-x-36 max-xl:translate-x-0" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
+     </section>
+     <section class="w-screen py-12 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 bg-stone-900 flex flex-col space-y-12">
+        <div class="space-y-2">
+            <h5 class="text-neutral-400 relative before:absolute before:left-28 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">RESERVATION</h5>
+            <h2 class="text-5xl max-lg:text-4xl font-semibold text-yellow-600 PlayFairDisplay">Book a Table</h2>
+        </div>
+        <form action="" class="flex flex-col space-y-8 text-white tracking-wide text-sm">
+            <div class="flex flex-col max-lg:flex-row max-lg:space-y-0 max-lg:space-x-4 space-y-8 w-full">
+                <div class="flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-4 space-x-4 max-lg:w-1/2">
+                    <input type="text" placeholder="Your Name" class="p-2 w-1/3 max-lg:w-full bg-transparent border-2 border-neutral-600 outline-yellow-600">
+                    <input type="email" placeholder="Your E-mail" class="p-2 w-1/3 max-lg:w-full bg-transparent border-2 border-neutral-600 outline-yellow-600">
+                    <input type="text" placeholder="Your Phone" class="p-2 w-1/3 max-lg:w-full bg-transparent border-2 border-neutral-600 outline-yellow-600">
+                </div>
+                <div class="flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-4 space-x-4 max-lg:w-1/2">
+                    <input type="date" placeholder="Your Name" class="p-2 w-1/3 max-lg:w-full bg-transparent border-2 border-neutral-600 outline-yellow-600">
+                    <input type="text" placeholder="Time" class="p-2 w-1/3 max-lg:w-full bg-transparent border-2 border-neutral-600 outline-yellow-600">
+                    <input type="text" placeholder="# f People" class="p-2 w-1/3 max-lg:w-full bg-transparent border-2 border-neutral-600 outline-yellow-600">
+                </div>
+            </div>
+            <textarea name="" id="" class="w-full h-44 bg-transparent border-2 border-neutral-600 outline-yellow-600 p-2" placeholder="Message"></textarea>
+            <div class="text-center">
+                <button class="px-4 py-2 text-white rounded-full bg-yellow-600 hover:bg-yellow-500 duration-200">Book a Table</button>
+            </div>
+        </form>
+     </section>
+     <section class="w-screen flex flex-col py-12 space-y-12 bg-stone-800">
+        <div class="space-y-2 mx-52 max-2xl:mx-28 max-xl:mx-16 max-sm:mx-2">
+            <h5 class="text-neutral-400 relative before:absolute before:left-16 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">GALLERY</h5>
+            <h2 class="text-5xl font-semibold text-yellow-600 PlayFairDisplay">Some photos from Our Restaurant</h2>
+        </div>
+        <div class="flex-col flex max-md:flex-row max-sm:flex-col">
+            <div class="flex max-md:flex-col">
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-1.jpg" alt="Img_1" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-2.jpg" alt="Img_2" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-3.jpg" alt="Img_3" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-4.jpg" alt="Img_4" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+            </div>
+            <div class="flex max-md:flex-col">
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-5.jpg" alt="Img_5" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-6.jpg" alt="Img_6" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-7.jpg" alt="Img_7" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+                <div class="w-1/4 max-md:w-full max-sm:w-full border-2 border-neutral-700 overflow-hidden">
+                    <img src="./recources/gallery-8.jpg" alt="Img_8" class="hover:scale-105 duration-150 cursor-pointer">
+                </div>
+            </div>
+        </div>
+     </section>
+     <section id="Chefs" class="py-12 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 flex flex-col space-y-6 bg-stone-900">
+        <div class="space-y-2">
+            <h5 class="text-neutral-400 relative before:absolute before:left-14 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">CHEFS</h5>
+            <h2 class="text-5xl max-lg:text-4xl font-semibold text-yellow-600 PlayFairDisplay">Our Proffesional Chefs</h2>
+        </div>
+        <div class="flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-4 max-lg:items-center space-x-4 py-4">
+            <div class="w-1/3 max-lg:w-2/3 max-sm:w-full relative group:">
+                <span class="absolute w-full group h-full text-center py-12 justify-end bg-gradient-to-b from-transparent to-black translate-y-5 opacity-0 hover:opacity-100 hover:translate-y-0 duration-200 group-hover:duration-200 text-white flex flex-col space-y-2">
+                    <h3 class="text-xl font-medium PlayFairDisplay ">Walter White</h3>
+                    <p class="italic text-sm">Master Chef</p>
+                    <div class="flex space-x-3 justify-center items-center mt-4 translate-y-5 group-hover:translate-y-0 duration-300">
+                        <i class="fa-brands fa-twitter cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-facebook cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-instagram cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-linkedin cursor-pointer hover:text-yellow-600 duration-200"></i>
+                    </div>
+                </span>
+                <img src="./recources/chefs-1.jpg" alt="Chef_1">
+            </div>
+            <div class="w-1/3 max-lg:w-2/3 max-sm:w-full relative group:">
+                <span class="absolute w-full h-full group text-center py-12 justify-end bg-gradient-to-b from-transparent to-black translate-y-5 opacity-0 hover:opacity-100 hover:translate-y-0 duration-200 group-hover:duration-200 text-white flex flex-col space-y-2">
+                    <h3 class="text-xl font-medium PlayFairDisplay">Sarah Jhonson</h3>
+                    <p class="italic text-sm">Patissier</p>
+                    <div class="flex space-x-3 justify-center items-center mt-4 translate-y-5 group-hover:translate-y-0 duration-300">
+                        <i class="fa-brands fa-twitter cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-facebook cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-instagram cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-linkedin cursor-pointer hover:text-yellow-600 duration-200"></i>
+                    </div>
+                </span>
+                <img src="./recources/chefs-2.jpg" alt="Chef_1">
+            </div>
+            <div class="w-1/3 max-lg:w-2/3 max-sm:w-full relative group:">
+                <span class="absolute w-full h-full group text-center py-12 justify-end bg-gradient-to-b from-transparent to-black translate-y-5 opacity-0 hover:opacity-100 hover:translate-y-0 duration-200 group-hover:duration-200 text-white flex flex-col space-y-2">
+                    <h3 class="text-xl font-medium PlayFairDisplay">William Anderson</h3>
+                    <p class="italic text-sm">Cook</p>
+                    <div class="flex space-x-3 justify-center items-center mt-4 translate-y-5 group-hover:translate-y-0 duration-300">
+                        <i class="fa-brands fa-twitter cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-facebook cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-instagram cursor-pointer hover:text-yellow-600 duration-200"></i>
+                        <i class="fa-brands fa-linkedin cursor-pointer hover:text-yellow-600 duration-200"></i>
+                    </div>
+                </span>
+                <img src="./recources/chefs-3.jpg" alt="Chef_1">
+            </div>
+        </div>
+     </section>
+     <section id="Contact" class="flex flex-col space-y-12 w-screen py-12 px-52 max-2xl:px-28 max-xl:px-16 max-sm:px-2 bg-stone-800">
+        <div class="space-y-2">
+            <h5 class="text-neutral-400 relative before:absolute before:left-20 before:ml-2 before:top-1/2 before:-translate-y-1/2 before:bg-neutral-400 before:w-32 before:h-0.5">CONTACT</h5>
+            <h2 class="text-5xl max-lg:text-4xl font-semibold text-yellow-600 PlayFairDisplay">Contact Us</h2>
+        </div>
+        <div class="flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-6 space-x-12">
+            <div class="flex-col space-y-8 w-1/3 max-lg:w-full">
+                <div class="flex space-x-3">
+                    <div class="w-14 h-14 bg-yellow-600 text-white flex justify-center items-center rounded-full">
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <h3 class="text-xl text-white font-semibold">Location:</h3>
+                        <p class="text-stone-300">A108 Adam Street, New York, NY 535022</p>
+                    </div>
+                </div>
+                <div class="flex space-x-3">
+                    <div class="w-14 h-14 bg-yellow-600 text-white flex justify-center items-center rounded-full">
+                        <i class="fa-regular fa-clock fa-lg"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <h3 class="text-xl text-white font-semibold">Open Hours:</h3>
+                        <p class="text-stone-300">Monday-sunday: 11:00AM - 23:00PM</p>
+                    </div>
+                </div>
+                <div class="flex space-x-3">
+                    <div class="w-14 h-14 bg-yellow-600 text-white flex justify-center items-center rounded-full">
+                        <i class="fa-regular fa-envelope fa-lg"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <h3 class="text-xl text-white font-semibold">E-mail:</h3>
+                        <p class="text-stone-300">info@example.com</p>
+                    </div>
+                </div>
+                <div class="flex space-x-3">
+                    <div class="w-14 h-14 bg-yellow-600 text-white flex justify-center items-center rounded-full">
+                        <i class="fa-solid fa-mobile-screen-button fa-lg"></i>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <h3 class="text-xl text-white font-semibold">Call:</h3>
+                        <p class="text-stone-300">+1 5589 55488 55s</p>
+                    </div>
+                </div>
+            </div>
+            <form class="flex-col w-2/3 max-lg:w-full text-white text-sm space-y-4">
+                <div class="flex space-x-4">
+                    <input type="text" placeholder="Your Name" class="p-3 w-1/2 outline-yellow-600 bg-transparent border-2 border-neutral-700">
+                    <input type="email" placeholder="Your Email" class="p-3 w-1/2 outline-yellow-600 bg-transparent border-2 border-neutral-700">
+                </div>
+                <input type="text" placeholder="Subject" class="p-3 w-full outline-yellow-600 bg-transparent border-2 border-neutral-700">
+                <textarea class="p-3 w-full h-44 outline-yellow-600 bg-transparent border-2 border-neutral-700" placeholder="Message"></textarea>
+                <div class="text-center">
+                    <button class="px-4 py-2 text-white rounded-full bg-yellow-600 hover:bg-yellow-500 duration-200">Book a Table</button>
+                </div>                   
+            </form>
+        </div>
+     </section>
+</main>
+<footer>
+    <section class="w-screen py-12 px-52  max-2xl:px-28 max-xl:px-16 max-sm:px-2 flex max-lg:flex-col max-lg:space-y-6 justify-between bg-stone-800 border-y border-y-gray-500">
+      <div class="flex flex-col text-white space-y-12 max-lg:space-y-6">
+        <h3 class="text-2xl">RESTAURANTLY</h3>
+        <div class="PlayFairDisplay">
+            <p>A108 Adam Street</p>
+            <p>NY 535022, USA</p>
+        </div>
+        <div class="space-y-2 PlayFairDisplay">
+         <p><b>Phone:</b>+1 0000 0000 00</p>
+         <p><b>Email:</b>info@example.com</p>
+        </div>
+        <div class="flex space-x-4 text-white">
+            <i class="fa-brands fa-twitter cursor-pointer fa-lg hover:text-yellow-600 duration-200 w-12 h-12 bg-neutral-700 rounded-full flex justify-center items-center"></i>
+            <i class="fa-brands fa-facebook cursor-pointer fa-lg hover:text-yellow-600 duration-200 w-12 h-12 bg-neutral-700 rounded-full flex justify-center items-center"></i>
+            <i class="fa-brands fa-instagram cursor-pointer fa-lg hover:text-yellow-600 duration-200 w-12 h-12 bg-neutral-700 rounded-full flex justify-center items-center"></i>
+            <i class="fa-brands fa-linkedin cursor-pointer fa-lg hover:text-yellow-600 duration-200 w-12 h-12 bg-neutral-700 rounded-full flex justify-center items-center"></i>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-4 text-white">
+    <h3 class="text-xl font-semibold PlayFairDisplay">Useful Links</h3>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Home</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>About us</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Services</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Term of Seivices</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Policy Privacy</a>
+      </div>
+      <div class="flex flex-col space-y-4 text-white">
+    <h3 class="text-xl font-semibold PlayFairDisplay">Our Services</h3>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Web Design</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Web Development</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Product Managment</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Marketing</a>
+    <a href="#" class="hover:text-yellow-600 hover:no-underline duration-200 space-x-2"><span class="text-xl text-yellow-600">&gt; &nbsp;</span>Graphic Design</a>
+      </div>
+      <div class="flex flex-col max-2xl:w-2/5 max-lg:w-full space-y-6 text-white">
+        <h3 class="text-lg PlayFairDisplay">Our Newsletter</h3>
+        <p class="">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+        <div class="flex items-center">
+            <input name="sub-btn" type="email" class="bg-transparent p-3 rounded-full w-full border">
+            <label for="sub-btn" class="p-3 bg-yellow-600 rounded-full mt-1.5 border border-y-yellow-600 -translate-x-full cursor-pointer">Subscribe</label>
+        </div>
+      </div>
+    </section>
+    <section class="w-screen py-12 bg-stone-950 text-white flex justify-center items-center text-center">
+        <div class="flex flex-col space-y-4">
+            <p>&copy; Copyright <b>Resturent</b>. All Right Reserved</p>
+            <p>Developed & Designed by <b class="text-yellow-600">DesignSpecturm</b></p>
+        </div>
+    </section>
+</footer>
+<script src="./index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

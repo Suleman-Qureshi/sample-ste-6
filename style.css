@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{scrollbar-width: 2rem;scrollbar-color:  #ca8a04 black;scroll-behavior: smooth;}
+body{font-family: Poppins;}
+.PlayFairDisplay{font-family:"Playfair Display" ;}
+.BgTransparentBlack {background-color: rgba(0, 0, 0, 0.4);}
+#Home {background: rgba(0, 0, 0, 0.5) url(./recources/hero-bg.jpg) no-repeat center/cover fixed;}
+#About{background:rgba(0, 0, 0, 0.7) url(./recources/about-bg.jpg)no-repeat center/cover fixed;}
+#Events{background:rgba(0, 0, 0, 0.7) url(./recources/events-bg.jpg) no-repeat center/cover fixed;}
+.PlayBurronAnimation{animation: Playbtn 1.3s infinite linear;}@keyframes Playbtn {from{border: 2rem solid #ca8b0479;}to{border: 0rem solid #ca8a04;}}
