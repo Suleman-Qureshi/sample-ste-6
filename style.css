@@ -8,4 +8,4 @@ body{font-family: Poppins;}
 #Home {background: rgba(0, 0, 0, 0.5) url(./recources/hero-bg.jpg) no-repeat center/cover fixed;}
 #About{background:rgba(0, 0, 0, 0.7) url(./recources/about-bg.jpg)no-repeat center/cover fixed;}
 #Events{background:rgba(0, 0, 0, 0.7) url(./recources/events-bg.jpg) no-repeat center/cover fixed;}
-.PlayBurronAnimation{animation: Playbtn 1.3s infinite linear;}@keyframes Playbtn {from{border: 2rem solid #ca8b0479;}to{border: 0rem solid #ca8a04;}}
+.PlayBurronAnimation{animation: Playbtn 1.8s infinite linear;}@keyframes Playbtn {0%{border: 2rem solid #ca8b0479;}50%{border: 0rem solid #ca8a04;}100%{border: 0rem solid #ca8a04;}}
